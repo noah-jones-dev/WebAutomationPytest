@@ -1,0 +1,13 @@
+Reports:
+- Use command in the terminal to initiate running all tests
+
+    -> python -m pytest tests/ --alluredir=reports/results
+
+- Use command in the terminal to generate report for all tests in quick view
+
+    -> allure serve reports/results
+
+- Use command in the terminal to generate report for all tests and save to share
+
+    -> allure generate reports/results -o reports/html --clean
+    -> allure open reports/html
