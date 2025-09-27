@@ -8,7 +8,7 @@ This repository is a Pytest based web automation project designed to showcase my
 - **Design Pattern:** Page Object Model (POM)
 - **Utilities:** WebDriverWait
 
-**Test Runs**
+**Test Runs** 
 
 ![TestDashboard](https://github.com/user-attachments/assets/876d19f9-7519-4877-8f52-c609e5e5f247)
 
