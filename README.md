@@ -4,7 +4,6 @@
 
 Fully functional web automation framework written in Python using the Pytest testing framework automating OrangeHRM software!
 
-
 ## Overview
 
 **WebAutomationPytest** is a web automation testing framework built with [Pytest](https://docs.pytest.org/) and [Selenium](https://www.selenium.dev/).  
@@ -20,6 +19,20 @@ This project is ideal for:
 - Demonstrating automation skills in a portfolio project.
 - QA engineers learning automation with Python.  
 - Teams needing a structured, maintainable Selenium + Pytest setup.
+
+## Tech Stack
+
+**Language & Frameworks:**  
+- Language: Python 3.13+  
+- Test Framework: Pytest
+- Web Driver: Selenium
+- Test Reporting: Allure
+
+**Tools & Utilities:**  
+- Browser Driver: ChromeDriver
+- Version Control: Git/Github
+- IDE: PyCharm
+
 ## Table of Contents
 
 - [Prerequisites](#prerequisites)
