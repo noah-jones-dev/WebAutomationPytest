@@ -104,85 +104,49 @@ allure open reports/html
 
 ## Project Structure
 
-<details>
-  <summary>Project Structure</summary>
+- [framework/](framework/) - Reusable components, helpers, and custom fields for tests
+  - [fields/](framework/fields/) - Custom field objects
+    - [base_field.py](framework/fields/base_field.py) - Base class for all field types
+    - [button_field.py](framework/fields/button_field.py) - Button field types
+    - [dropdown_field.py](framework/fields/dropdown_field.py) - Dropdown field types
+    - [link_field.py](framework/fields/link_field.py) - Link field types
+    - [navigation_field.py](framework/fields/navigation_field.py) - Navigation field types
+    - [static_field.py](framework/fields/static_field.py) - Static text field types
+    - [table_field.py](framework/fields/table_field.py) - Table field types
+    - [textbox_field.py](framework/fields/textbox_field.py) - Textbox field types
+  - [helpers/](framework/helpers/) - Helper classes like wait utilities, verifications
+    - [verifications/](framework/helpers/verifications/) - Verification objects for field types
+      - [verify_base.py](framework/helpers/verifications/verify_base.py) - Verification class for base fields
+      - [verify_button.py](framework/helpers/verifications/verify_button.py) - Verification class for button fields
+      - [verify_cell.py](framework/helpers/verifications/verify_cell.py) - Verification class for cells
+      - [verify_dropdown.py](framework/helpers/verifications/verify_dropdown.py) - Verification class for dropdown fields
+      - [verify_link.py](framework/helpers/verifications/verify_link.py) - Verification class for link fields
+      - [verify_static.py](framework/helpers/verifications/verify_static.py) - Verification class for static text fields
+      - [verify_textbox.py](framework/helpers/verifications/verify_textbox.py) - Verification class for textbox fields
+    - [wait_utilities/](framework/helpers/wait_utilities/) - Utility objects for waits
+      - [wait_helper.py](framework/helpers/wait_utilities/wait_helper.py) - Utility methods for waiting for loads
+    - [window_utilities/](framework/helpers/window_utilities/) - Utility objects for window handles
+      - [window_helper.py](framework/helpers/window_utilities/window_helper.py) - Utility methods for switching window handles
 
--  <kbd>[framework/](framework/)</kbd> - Reusable components, helpers, and custom fields for tests<br/>
-    <details>
-        <summary>framework/</summary>
-        - <kbd>[fields/](framework/fields/)</kbd> - Custom field objects<br/>
-            <details>
-                <summary>fields/</summary>
-                - <kbd>[base_field](framework/fields/base_field.py)</kbd>Base class for all field types<br/>
-                - <kbd>[button_field](framework/fields/button_field.py)</kbd>Button field types<br/>
-                - <kbd>[dropdown_field](framework/fields/dropdown_field.py)</kbd>Dropdown field types<br/>
-                - <kbd>[link_field](framework/fields/link_field.py)</kbd>link field types<br/>
-                - <kbd>[navigation_field](framework/fields/navigation_field.py)</kbd>Navigation field types<br/>
-                - <kbd>[static_field](framework/fields/static_field.py)</kbd>static text field types<br/>
-                - <kbd>[table_field](framework/fields/table_field.py)</kbd>table field types<br/>
-                - <kbd>[textbox_field](framework/fields/textbox_field.py)</kbd>textbox field types<br/>
-            </details>
-        - <kbd>[helpers/](framework/helpers/)</kbd> - Helper classes like wait utilities, verifications<br/>
-            <details>
-                <summary>helpers/</summary>
-                - <kbd>[verifications/](framework/helpers/verifications/)</kbd>Verification Objects for field types<br/>
-                    <details>
-                        <summary>verifications/</summary>
-                        - <kbd>[verify_base](framework/helpers/verifications/verify_base.py)</kbd>Verification class for base fields<br/>
-                        - <kbd>[verify_button](framework/helpers/verifications/verify_button.py)</kbd>Verification class for button fields<br/>
-                        - <kbd>[verify_cell](framework/helpers/verifications/verify_cell.py)</kbd>Verification class for cells<br/>
-                        - <kbd>[verify_dropdown](framework/helpers/verifications/verify_dropdown.py)</kbd>Verification class for dropdown fields<br/>
-                        - <kbd>[verify_link](framework/helpers/verifications/verify_link.py)</kbd>Verification class for link fields<br/>
-                        - <kbd>[verify_static](framework/helpers/verifications/verify_static.py)</kbd>Verification class for static text fields<br/>
-                        - <kbd>[verify_textbox](framework/helpers/verifications/verify_textbox.py)</kbd>Verification class for textbox fields<br/>
-                    </details>
-                - <kbd>[wait_utilities](framework/helpers/wait_utilities/)</kbd>Utility objects for waits<br/>
-                    <details>
-                        <summary>wait utilities/</summary>
-                        - <kbd>[wait_helper](framework/helpers/wait_utilities/wait_helper.py)<kbd>Utility methods for waiting for loads<br/>
-                    </details>
-                - <kbd>[window_utilities](framework/helpers/window_utilities/)</kbd>Utility objects for window handles<br/>
-                    <details>
-                        <summary>window_utilities/</summary>
-                        - <kbd>[window_helper](framework/helpers/window_utilities/window_helper.py)</kbd>Utility methods for switching window handles<br/>
-                    </details>
-    </details>
--  <kbd>[pages/](pages/)</kbd> - Page Object Model (POM) classes representing different pages<br/>
-    <details>
-        <summary>pages/</summary>
-        - <kbd>[performance_pages/](pages/performance_pages/)</kbd>Pages belonging to Performance area<br/>
-            <details>
-                <summary>performance_pages/</summary>
-                - <kbd>[employee_reviews_page](pages/performance_pages/employee_reviews_page.py)</kbd>Employee Review Page object<br/>
-                - <kbd>[my_reviews_page](pages/performance_pages/my_reviews_page.py)</kbd>My Review Page object<br/>
-                - <kbd>[performance_base_page](pages/performance_pages/performance_base_page.py)</kbd>Performance Base Page object<br/>
-            </details>
-        - <kbd>[time_pages/](pages/time_pages/)</kbd>...<br/>
-            <details>
-                <summary>time_pages/</summary>
-                - <kbd>[punch_in_out_page](pages/time_pages/punch_in_out_page.py)</kbd>Punch In/Out Page object<br/>
-                - <kbd>[time_base_page](pages/time_pages/time_base_page.py)</kbd>Time Base Page object<br/>
-            </details>
-        - <kbd>[base_page](pages/base_page.py)</kbd>Universal Base Page object<br/>
-        - <kbd>[dashboard_page](pages/dashboard_page.py)</kbd>Dashboard Page object<br/>
-        - <kbd>[login_page](pages/login_page.py)</kbd>Login Page object<br/>
-    </details>
--  <kbd>[reports/](reports/)</kbd> - Stores test results and Allure reports<br/>
-    <details>
-        <summary>reports/</summary>
-        - <kbd>[results/](reports/results/)</kbd>Test results<br/>
-    </details>
--  <kbd>[tests/](tests/)</kbd> - Contains all automated test cases<br/>
-    <details>
-        <summary>tests/</summary>
-        - <kbd>[conftest](tests/conftest.py)</kbd>Base Test configuration<br/>
-        - <kbd>[dashboard_test](tests/dashboard_test.py)</kbd>Dashboard functionality tests<br/>
-        - <kbd>[punch_in_out_test](tests/punch_in_out_test.py)</kbd>Punch In/Out functionality tests<br/>
-    </details>
--  <kbd>[tips/](tips/)</kbd> - Running tests through command line guide<br/>
-    <details>
-        <summary>tips/</summary>
-        - <kbd>[running_reports.txt](tips/running_reports.txt)</kbd>Guide to running and generating test reports in the CLI<br/>
-    </details>
+- [pages/](pages/) - Page Object Model (POM) classes representing different pages
+  - [performance_pages/](pages/performance_pages/) - Pages belonging to Performance area
+    - [employee_reviews_page.py](pages/performance_pages/employee_reviews_page.py) - Employee Review Page object
+    - [my_reviews_page.py](pages/performance_pages/my_reviews_page.py) - My Review Page object
+    - [performance_base_page.py](pages/performance_pages/performance_base_page.py) - Performance Base Page object
+  - [time_pages/](pages/time_pages/) - Time-related pages
+    - [punch_in_out_page.py](pages/time_pages/punch_in_out_page.py) - Punch In/Out Page object
+    - [time_base_page.py](pages/time_pages/time_base_page.py) - Time Base Page object
+  - [base_page.py](pages/base_page.py) - Universal Base Page object
+  - [dashboard_page.py](pages/dashboard_page.py) - Dashboard Page object
+  - [login_page.py](pages/login_page.py) - Login Page object
 
-</details>
+- [reports/](reports/) - Stores test results and Allure reports
+  - [results/](reports/results/) - Test results
+
+- [tests/](tests/) - Contains all automated test cases
+  - [conftest.py](tests/conftest.py) - Base Test configuration
+  - [dashboard_test.py](tests/dashboard_test.py) - Dashboard functionality tests
+  - [punch_in_out_test.py](tests/punch_in_out_test.py) - Punch In/Out functionality tests
+
+- [tips/](tips/) - Running tests through command line guide
+  - [running_reports.txt](tips/running_reports.txt) - Guide to running and generating test reports in the 
